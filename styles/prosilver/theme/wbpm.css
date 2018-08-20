@@ -1,0 +1,15 @@
+@keyframes wbblink-pm {
+	from {color: #FF0000;}
+    to {visibility: hidden;}
+}
+
+@-webkit-keyframes wbblink-pm {
+	from {color: #FF0000;}
+    to {visibility: hidden;}
+}
+
+.wbicon_pm strong{
+	color: #FF0000;
+	animation: wbblink-pm 1s steps(2, start) infinite;
+	-webkit-animation: wbblink-pm 1s steps(2, start) infinite;
+}
