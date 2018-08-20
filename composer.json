@@ -1,0 +1,33 @@
+{
+    "name": "alex75/welcomeback",
+    "type": "phpbb-extension",
+    "description": "A toolbar for users, simple but with lots of information and useful links",
+    "homepage": "",
+    "version": "1.0.15",
+    "time": "2018-08-19",
+    "license": "GPL-2.0-only",
+    "authors": [
+        {
+            "name": "Alessandro DI BENEDETTO",
+            "username": "alex75",
+            "email": "forum@phpbb-store.it",
+            "homepage": "https://phpbb-store.it",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "phpbb/phpbb": "3.2.*"
+    },
+    "extra": {
+        "display-name": "Welcome back",
+        "soft-require": {
+            "phpbb/phpbb": "3.2.*"
+        },
+        "version-check": {
+            "host": "www.phpbb.com",
+            "directory": "/customise/db/extension/welcome_back_extension",
+            "filename": "version_check"
+        }
+    }
+}
