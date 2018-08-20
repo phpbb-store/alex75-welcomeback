@@ -1,1 +1,12 @@
-
+services:
+    alex75.welcomeback.listener:
+        class: alex75\welcomeback\event\listener
+        arguments:
+            - '@user'
+            - '@config'
+            - '@template'
+            - '%core.root_path%'
+            - '%core.php_ext%'
+            - '@language'
+        tags:
+            - { name: event.listener }
