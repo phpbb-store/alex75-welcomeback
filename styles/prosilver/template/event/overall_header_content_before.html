@@ -1,0 +1,116 @@
+<!-- Welcome back extension By alex75 https://www.phpbb-store.it -->
+<!-- IF not S_IS_BOT and S_USER_LOGGED_IN -->
+<div class="welcbackhide">
+<br /><div class="forabg">
+         <div class="inner">
+         <ul class="topiclist">
+            <li class="header">
+               <dl class="row-item">
+                  <dt>{WB_SITENAME}</dt>
+                                              </dl>
+            </li>
+         </ul>
+         <ul class="topiclist forums">
+         <li>
+            <dl>
+               <dd id="blockwb">
+			   <div>{L_WELCOMEBACK_HI}<br />{CURRENT_USERNAME_SIMPLE}<br />{L_WELCOMEBACK_SEE}</div>
+               <!-- IF CURRENT_USER_AVATAR --><div class="welcome-avatar">{CURRENT_USER_AVATAR}<!-- ELSE --><div class="welcome-avatar"><img src="{T_THEME_PATH}/images/no_avatar.gif" alt="" /></div><!-- ENDIF -->
+               </dd>
+               <dd class="lastpost" id="blockwb1">
+               <span><!-- IF S_USER_LOGGED_IN -->&bull; {LAST_VISIT_DATE}<br />&bull; {CURRENT_TIME}<br />&bull; {S_TIMEZONE}<!-- ELSE -->&bull; {CURRENT_TIME}<br />&bull; {S_TIMEZONE}<!-- ENDIF -->
+			   <li class="lastpost">
+			   <br />&bull; <a href="{U_USER_PROFILE}" title="{L_READ_PROFILE}" role="menuitem">{L_READ_PROFILE}</a><br />
+					<a href="{U_PROFILE}" title="{L_PROFILE}" accesskey="e">&bull; {L_PROFILE}</a><!-- IF U_MCP --><br /><a href="{U_MCP}">&bull; {L_MCP}</a><!-- ENDIF --><!-- IF U_ACP --><br /><a href="{U_ACP}">&bull; {L_ACP}</a><!-- ENDIF -->
+						<br /><!-- IF S_NOTIFICATIONS_DISPLAY --><br /><br />&bull; <a class="wbicon_notify" href="{U_VIEW_ALL_NOTIFICATIONS}" id="notification_list_button"><span>{L_NOTIFICATIONS} [</span><strong>{NOTIFICATIONS_COUNT}</strong><span>]</span></a><!-- ENDIF -->
+						<!-- IF S_DISPLAY_PM --><br />&bull; <a class="wbicon_pm" href="{U_PRIVATEMSGS}" role="menuitem"><span>{L_PRIVATE_MESSAGES} [</span><strong>{PRIVATE_MESSAGE_COUNT}</strong><span>]</span></a><!-- ENDIF -->
+			   </li></span>
+<br />
+ </dd>
+<!-- IF SCRIPT_NAME eq 'index' -->
+               <dd class="lastpost" id="blockwb2"><span>&bull; {TOTAL_POSTS} <br />&bull; {TOTAL_TOPICS}<br /><br />&bull; <a href="{U_MEMBERLIST}"> {TOTAL_USERS}</a><br />&bull; {NEWEST_USER}<br />&bull; <a href="{U_TEAM}">{L_THE_TEAM}</a><br />
+               <!-- IF U_VIEWONLINE --><br /><a href="{U_VIEWONLINE}">&bull; {L_WHO_IS_ONLINE}</a><!-- ELSE -->&bull; {L_WHO_IS_ONLINE}<!-- ENDIF -->
+			   <br />&bull; {RECORD_USERS}
+			   <br /><br /><!-- IF S_DISPLAY_BIRTHDAY_LIST -->	&bull; <strong>{L_BIRTHDAYS}</strong>
+	<!-- IF BIRTHDAY_LIST --><br />{L_CONGRATULATIONS}{L_COLON} <strong>{BIRTHDAY_LIST}</strong><!-- ELSE --><br />{L_NO_BIRTHDAYS}<!-- ENDIF -->
+	<!-- ENDIF -->
+	</span>
+<br />
+	</dd>
+<!-- ENDIF -->
+<!-- IF SCRIPT_NAME eq 'viewforum' -->
+			   <dd class="lastpost" id="blockwb2">
+<!-- IF not TOTAL_TOPICS -->
+<!-- BEGIN navlinks -->
+<span class="crumb">{L_YOU_ARE_HERE}{L_COLON} <a href="{navlinks.U_VIEW_FORUM}" itemprop="url"><span itemprop="title">{navlinks.FORUM_NAME}</span></a></span>
+<!-- END navlinks -->
+<br />
+<!-- ENDIF -->
+<!-- IF TOTAL_TOPICS -->&bull; {TOTAL_TOPICS} {L_IN_THIS_FORUM}<br /><br /><!-- ENDIF -->
+&bull; <a href="{U_INDEX}" data-navbar-reference="index"><!-- IF not U_SITE_HOME --><i class="icon fa-home fa-fw" aria-hidden="true"></i><!-- ENDIF --><span>{L_INDEX}</span></a><br />
+&bull; <a href="{U_MEMBERLIST}" role="menuitem"><i class="icon fa-group fa-fw" aria-hidden="true"></i><span>{L_MEMBERLIST}</span></a><br />
+&bull; <a href="{U_TEAM}" role="menuitem"><i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>{L_THE_TEAM}</span></a><br /><br />
+<br /><a href="{U_FAQ}" rel="help" title="{L_FAQ_EXPLAIN}" role="menuitem"><i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>{L_FAQ}</span></a>
+<br /><a href="{U_SEARCH}" role="menuitem"><i class="icon fa-search fa-fw" aria-hidden="true"></i><span>{L_SEARCH}</span></a>
+<br /><br /><a href="{U_DELETE_COOKIES}" data-ajax="true" data-refresh="true" role="menuitem"><i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>{L_DELETE_COOKIES}</span></a><br />
+<br /><br />
+			   </dd>
+<!-- ENDIF -->
+<!-- IF SCRIPT_NAME eq 'viewtopic' -->
+			   <dd class="lastpost" id="blockwb2">
+<!-- IF TOTAL_POSTS -->&bull; {TOTAL_POSTS} {L_IN_THIS_TOPIC}<br /><br /><!-- ENDIF -->
+&bull; <a href="{U_INDEX}" data-navbar-reference="index"><!-- IF not U_SITE_HOME --><i class="icon fa-home fa-fw" aria-hidden="true"></i><!-- ENDIF --><span>{L_INDEX}</span></a><br />
+&bull; <a href="{U_MEMBERLIST}" role="menuitem"><i class="icon fa-group fa-fw" aria-hidden="true"></i><span>{L_MEMBERLIST}</span></a><br />
+&bull; <a href="{U_TEAM}" role="menuitem"><i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>{L_THE_TEAM}</span></a><br /><br />
+<br /><a href="{U_FAQ}" rel="help" title="{L_FAQ_EXPLAIN}" role="menuitem"><i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>{L_FAQ}</span></a>
+<br /><a href="{U_SEARCH}" role="menuitem"><i class="icon fa-search fa-fw" aria-hidden="true"></i><span>{L_SEARCH}</span></a>
+<br /><br /><a href="{U_DELETE_COOKIES}" data-ajax="true" data-refresh="true" role="menuitem"><i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>{L_DELETE_COOKIES}</span></a><br />
+<br /><br />
+			   </dd>
+<!-- ENDIF -->
+<!-- IF SCRIPT_NAME <> 'viewforum' and SCRIPT_NAME <> 'viewtopic' and SCRIPT_NAME <> 'index' -->
+			   <dd class="lastpost" id="blockwb2">
+<br />
+&bull; <a href="{U_INDEX}" data-navbar-reference="index"><!-- IF not U_SITE_HOME --><i class="icon fa-home fa-fw" aria-hidden="true"></i><!-- ENDIF --><span>{L_INDEX}</span></a><br />
+&bull; <a href="{U_MEMBERLIST}" role="menuitem"><i class="icon fa-group fa-fw" aria-hidden="true"></i><span>{L_MEMBERLIST}</span></a><br />
+&bull; <a href="{U_TEAM}" role="menuitem"><i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>{L_THE_TEAM}</span></a><br /><br />
+<br /><a href="{U_FAQ}" rel="help" title="{L_FAQ_EXPLAIN}" role="menuitem"><i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>{L_FAQ}</span></a>
+<br /><a href="{U_SEARCH}" role="menuitem"><i class="icon fa-search fa-fw" aria-hidden="true"></i><span>{L_SEARCH}</span></a>
+<br /><br /><a href="{U_DELETE_COOKIES}" data-ajax="true" data-refresh="true" role="menuitem"><i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>{L_DELETE_COOKIES}</span></a><br />
+<br /><br />
+			   </dd>
+<!-- ENDIF -->
+			   <dd id="blockwb3">
+               <!-- IF S_DISPLAY_SEARCH -->
+						<!-- IF S_REGISTERED_USER -->
+							<br />&bull; <a href="{U_WBYOURSUBSCRIBED}" title="{L_YOUR_SUBSCRIBED}" role="menuitem">{L_YOUR_SUBSCRIBED}</a>
+							<br />&bull; <a href="{U_WBYOURBOOKMARKS}" title="{L_YOUR_BOOKMARKS}" role="menuitem">{L_YOUR_BOOKMARKS}</a>
+							<br />&bull; <a href="{U_WBYOURDRAFTS}" title="{L_YOUR_DRAFTS}" role="menuitem">{L_YOUR_DRAFTS}</a>
+							<br />&bull; <a href="{U_WBYOURATTACHMENTS}" title="{L_YOUR_ATTACHMENTS}" role="menuitem">{L_YOUR_ATTACHMENTS}</a>
+							<br />&bull; <a href="{U_WBYOURTOPICS}" role="menuitem">{L_WBMY_TOPICS}</a>
+							<br />&bull; <a href="{U_SEARCH_SELF}" role="menuitem">{L_SEARCH_SELF}</a>
+						<!-- ENDIF -->
+						<!-- IF S_USER_LOGGED_IN -->
+							<br />&bull; <a href="{U_SEARCH_NEW}" role="menuitem">{L_SEARCH_NEW}</a>
+						<!-- ENDIF -->
+						<!-- IF S_LOAD_UNREADS --> 
+							<br />&bull; <a href="{U_SEARCH_UNREAD}" role="menuitem">{L_SEARCH_UNREAD}</a>
+						<!-- ENDIF -->
+						<br />&bull; <a href="{U_SEARCH_UNANSWERED}" role="menuitem">{L_SEARCH_UNANSWERED}</a>
+						<br />&bull; <a href="{U_SEARCH_ACTIVE_TOPICS}" role="menuitem">{L_SEARCH_ACTIVE_TOPICS}</a>
+						<p class="separator"></p>
+<!-- IF SCRIPT_NAME eq 'index' -->
+<br /><a href="{U_FAQ}" rel="help" title="{L_FAQ_EXPLAIN}" role="menuitem"><i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>{L_FAQ}</span></a>
+						&emsp;<a href="{U_SEARCH}" role="menuitem"><i class="icon fa-search fa-fw" aria-hidden="true"></i><span>{L_SEARCH}</span></a>
+					    &emsp;<a href="{U_LOGIN_LOGOUT}" title="{L_LOGIN_LOGOUT}" accesskey="x" role="menuitem"><i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>{L_LOGIN_LOGOUT}</span></a>
+<!-- ELSE -->						
+						<br /><a href="{U_LOGIN_LOGOUT}" title="{L_LOGIN_LOGOUT}" accesskey="x" role="menuitem"><i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>{L_LOGIN_LOGOUT}</span></a>
+<!-- ENDIF -->
+				<!-- ENDIF -->
+<br /><br />                
+					</dd>
+            </dl>
+         </li>
+         </ul>
+</div></div></div>
+<!-- ENDIF -->
